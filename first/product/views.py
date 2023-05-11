@@ -10,5 +10,14 @@ def product(request):
 
 
 def details(request):
-    frm = RecentProduct(auto_id= True, label_suffix= " ")
+    if request.method == "POST":
+        frm = RecentProduct(request.POST)
+        print(frm)
+        print("POST statement")
+        print(frm.cleaned_data)
+
+
+    else:
+        frm = RecentProduct(auto_id= True, label_suffix= " ")
+        print("GET statement")
     return render(request, "Product/recent.html",{"form" : frm})
