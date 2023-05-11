@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from product.forms import RecentProduct
+from django.http import HttpResponseRedirect
 
 
 
@@ -9,12 +10,16 @@ def product(request):
 
 
 
+def send(request):
+    return render(request, "Product/submit.html")
+
+
 def details(request):
     if request.method == "POST":
         frm = RecentProduct(request.POST)
-        print(frm)
-        print("POST statement")
-        print(frm.cleaned_data)
+        if frm.is_valid():
+            print("Valid form")    
+            return HttpResponseRedirect("/pro/successfully")
 
 
     else:
