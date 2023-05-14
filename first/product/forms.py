@@ -1,3 +1,4 @@
+from django.core import validators
 from django import forms
 
 class RecentProduct(forms.Form):
@@ -9,7 +10,8 @@ class RecentProduct(forms.Form):
     text_area = forms.CharField(widget=forms.Textarea(attrs={"rows": 15, "cols": 50}))
     check_box = forms.CharField(widget=forms.CheckboxInput)
     files = forms.CharField(widget=forms.FileInput)
-    shuvo = forms.BooleanField(label = "Do you love Shuvo?")
+
+
 
     def clean(self):
         cleaned_data = super().clean()
