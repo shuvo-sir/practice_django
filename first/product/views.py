@@ -19,7 +19,7 @@ def details(request):
     if request.method == "POST":
         frm = RecentProduct(request.POST)
         if frm.is_valid():
-
+            print(frm.cleaned_data["password"])
             pas = frm.cleaned_data["password"]
             lap = frm.cleaned_data["laptop"]
             eml = frm.cleaned_data["email"]
