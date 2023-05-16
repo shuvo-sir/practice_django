@@ -8,4 +8,4 @@ class laptop(models.Model):
      about = models.CharField(max_length=50)
      text_area = models.CharField(max_length=50)
      check_box = models.CharField(max_length=50)
-     files = models.CharField(max_length=50)
+     

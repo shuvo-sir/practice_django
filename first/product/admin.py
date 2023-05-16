@@ -5,4 +5,4 @@ from .models import laptop
 admin.site.register(laptop)
 
 class laptopAdmin(admin.ModelAdmin):
-    list_display = ("password","laptop","email","about","text_area","check_box","files")
+    list_display = ("password","laptop","email","about","text_area","check_box")
