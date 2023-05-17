@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.contrib.auth.forms import UserCreationForm
+from .forms import BuildingAdd
 # Create your views here.
 def customer(request):
     return render(request, "Review/review.html")
@@ -8,12 +8,12 @@ def customer(request):
 
 def building_form(request):
     if request.method == "POST":
-        frm = UserCreationForm(request.POST)
+        frm = BuildingAdd(request.POST)
         if frm.is_valid():
             frm.save()
 
     else:
 
-        frm = UserCreationForm
+        frm = BuildingAdd
     return render(request,"Review/building.html", {"form" : frm})
 
