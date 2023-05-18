@@ -32,7 +32,7 @@ def login_form(request):
             user = authenticate(username = usern, password = userp)
             if user is not None:
                 login(request,user)
-                return HttpResponseRedirect('rew/success')
+                return HttpResponseRedirect('/rew/success')
     else:
         frm = AuthenticationForm()
         return render(request, "Review/login.html", {"form" : frm})
@@ -42,3 +42,10 @@ def login_form(request):
 # Successfully Login
 def login_success(request):
     return render(request,"Review/success.html")
+
+
+
+# Log out
+def logout_form(request):
+    logout(request)
+    return HttpResponseRedirect("/rew/login/")
