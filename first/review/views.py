@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from .forms import BuildingAdd
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 
 # Create your views here.
 def customer(request):
@@ -35,7 +35,7 @@ def login_form(request):
                 return HttpResponseRedirect('/rew/success')
     else:
         frm = AuthenticationForm()
-        return render(request, "Review/login.html", {"form" : frm})
+    return render(request, "Review/login.html", {"form" : frm})
 
 
 
@@ -53,5 +53,16 @@ def logout_form(request):
 
 # Password change using old password
 def password_change(request):
-    frm = PasswordChangeForm(user=request.user)
-    return render(request, "Review/cpass.html", {"form" : frm})
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            frm = PasswordChangeForm(data=request.POST, user=request.user)
+            if frm.is_valid():
+                frm.save()
+                update_session_auth_hash(request, frm.user)
+                return HttpResponseRedirect('/rew/success')
+        else:
+            frm = PasswordChangeForm(user=request.user)
+        return render(request, "Review/cpass.html", {"form" : frm})
+
+    else:
+        return HttpResponseRedirect("/rew/login/")
