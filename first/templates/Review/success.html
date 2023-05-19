@@ -9,13 +9,21 @@
 <body>
     <h1>Successfully Login</h1>
 
-    <form action="" method = "POST">
+    <form action="" method = "POST" novalidate>
         {% csrf_token %}
-        {{form.as_p}}
+        {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+        <p>{{error}}</p>
+        {% endfor %}
+        {% endif %}
+        {% for frm in form %}
+        {{frm.label_tag}} {{frm}} {{frm.errors | striptags}} <br> <br>
+        {% endfor %}
+        <input type="submit" value = "Save">
     </form>
     
-    <a href="{% url 'logout' %}">Logout</a>
-    <a href="{% url 'passwordchange' %}">Password change using old password</a>
+    <a href="{% url 'logout' %}">Logout</a> <br>
+    <a href="{% url 'passwordchange' %}">Password change using old password</a> <br>
 
 </body>
 </html>

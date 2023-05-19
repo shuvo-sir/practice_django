@@ -42,8 +42,15 @@ def login_form(request):
 # Successfully Login
 def login_success(request):
     if request.user.is_authenticated:
-        frm = ModifySuccessForm(instance = request.user)
+        if request.method == 'POST':
+            frm = ModifySuccessForm(request.POST, instance=request.user)
+            if frm.is_valid():
+                frm.save()
+        else:
+            frm = ModifySuccessForm(instance = request.user)
         return render(request,"Review/success.html", {"form" : frm})
+    else:
+        return HttpResponseRedirect("/login/")        
 
 
 
