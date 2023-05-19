@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
-from .forms import BuildingAdd
-from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
+from .forms import BuildingAdd, ModifySuccessForm
+from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm, UserChangeForm
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 
 # Create your views here.
@@ -41,7 +41,9 @@ def login_form(request):
 
 # Successfully Login
 def login_success(request):
-    return render(request,"Review/success.html")
+    if request.user.is_authenticated:
+        frm = ModifySuccessForm(instance = request.user)
+        return render(request,"Review/success.html", {"form" : frm})
 
 
 
