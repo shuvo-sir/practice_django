@@ -1,7 +1,24 @@
-body{
-    background-color: aqua;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppoins', sans-serif;
 }
-img{
-    height: 400px;
-    width: 300px;
+
+body{
+    background:  #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100%;
 }
