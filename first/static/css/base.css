@@ -16,7 +16,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 40px 100px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -27,9 +27,11 @@ header{
     font-size: 2em;
     color: #359381;
     pointer-events: none;
-    margin-right: 400px;
+    margin-right: 270px;
 }
 
+
+/* This is the nev bar */
 .navigation a {
     text-decoration: none;
     color: #359381;
@@ -37,6 +39,7 @@ header{
     border-radius: 20px;
     margin: 0 10px;
     font-weight: 600;
+    margin-left: 50px;
 }
 
 .navigation a:hover,
@@ -45,6 +48,29 @@ header{
     color: #fff;
 }
 
+
+/* This is the sing up and login buttun */
+
+.log{
+    margin-left: 250px;
+}
+
+.log a{
+    text-decoration: none;
+    color: #359381;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.log a:hover{
+    background-color: #359381;
+    color: #fff;
+}
+
+
+/* This is the picture section  */
 
 .diu {
     position: relative;
