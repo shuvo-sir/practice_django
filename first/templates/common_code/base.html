@@ -18,17 +18,36 @@
 
     <header>
       <h2 class="logo">Logo</h2>
-      <nav class="navigation"></nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Service</a>
-      <a href="#">Contact</a>
+      <nav class="navigation">
+        <a href="#" class = "active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Service</a>
+        <a href="#">Contact</a>
+      </nav>
+      
 
     </header>
 
-    {% block img%}
-         <img src="{% static 'image/shuvo1.jpg' %}" alt=""> 
-    {% endblock img %}
+    <section class = "diu">
+        
+        <img src="{% static 'image/hill1.png' %}" id="hill1">
+        <img src="{% static 'image/hill2.png' %}" id="hill2">
+        <img src="{% static 'image/hill3.png' %}" id="hill3">
+        <img src="{% static 'image/hill4.png' %}" id="hill4">
+        <img src="{% static 'image/hill5.png' %}" id="hill5">
+        <img src="{% static 'image/tree.png' %}" id="tree">
+        <h2 id = "text">DIU QUESTION BANK</h2>
+        <img src="{% static 'image/leaf.png' %}" id="leaf">
+        <img src="{% static 'image/plant.png' %}" id="plant">
+    </section>
+
+
+    <section class="sec">
+        <h2>Diu Scorolling Website</h2>
+       
+    </section>
+
+
 
     {% block content %}{% endblock content %}
 

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'payments',
     'product',
     'review',
+    'commoneCode',
 ]
 
 MIDDLEWARE = [
