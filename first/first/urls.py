@@ -26,4 +26,5 @@ urlpatterns = [
     path("pro/", include("product.urls")),
     path("rew/", include("review.urls")),
     path("", include("commoneCode.urls")),
+    path("", include("lo_up.urls")),
 ]

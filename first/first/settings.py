@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'product',
     'review',
     'commoneCode',
+    'lo_up',
 ]
 
 MIDDLEWARE = [

@@ -17,8 +17,6 @@
    
 </head>
 <body>
-
-
     <header>
       <h2 class="logo">Logo</h2>
       <nav class="navigation">
@@ -29,8 +27,8 @@
       </nav>
 
       <nav class = "log">
-        <a href="#">Login</a>
-        <a href="#">SingUp</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'signup' %}">SingUp</a>
       </nav>
     </header>
 
@@ -43,27 +41,25 @@
         <img src="{% static 'image/hill5.png' %}" id="hill5">
         <img src="{% static 'image/tree.png' %}" id="tree">
         <h2 id = "text">DIU QUESTION BANK</h2>
-        {% comment %} <img src="{% static 'image/leaf.png' %}" id="leaf"> {% endcomment %}
+        <img src="{% static 'image/leaf.png' %}" id="leaf">
         <img src="{% static 'image/plant.png' %}" id="plant">
     </section>
 
-
     <section class = "sec">
-        <h2>Diu Scrolling Website</h2>
-        <p>
-            In the DIU Question Bank, sections are used to categorize and organize questions based on specific subjects, topics, or disciplines. <br><br>
-            Sections provide a structured framework for users to easily navigate and locate relevant questions within the question bank. <br><br>
-            Here are some key points about sections in the DIU Question Bank.
-        </p>
-    </section>
+      <h2>Diu Scrolling Website</h2>
+      <p>
+          In the DIU Question Bank, sections are used to categorize and organize questions based on specific subjects, topics, or disciplines. <br><br>
+          Sections provide a structured framework for users to easily navigate and locate relevant questions within the question bank. <br><br>
+          Here are some key points about sections in the DIU Question Bank.
+      </p>
+   </section>
 
 
 
-    {% block content %}{% endblock content %}
+  {% block content %}{% endblock content %}
 
-    {% load static %}  
-   <script src="{% static 'javaScript/base.js' %}"></script>
-
+  {% load static %}  
+ <script src="{% static 'javaScript/base.js' %}"></script>
 
 </body>
 </html>
