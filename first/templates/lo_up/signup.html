@@ -33,6 +33,9 @@
         </span>
         <div class = "form-box login">
             <h2>SignUp</h2>
+            {% if error_message %}
+                <p class="error">{{ error_message }}</p>
+            {% endif %}
             <form action="" method = "POST">
                 {% csrf_token %}
                 <div class = "input-box">
@@ -58,7 +61,7 @@
 
 
                 <div class="remember-forgot">
-                    <label><input type="checkbox" name = "checkbox">I agree to the terms & conditions</label>
+                    <label><input type="checkbox" required name = "checkbox">I agree to the terms & conditions</label>
 
                 </div>
                 <button type = "submit" class = "btn">SignUp</button>
