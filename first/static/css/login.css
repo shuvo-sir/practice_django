@@ -85,6 +85,14 @@ body{
 }
 
 
+.wrapper .icon-close .close-icon{
+    font-size: 2em;
+}
+
+.wrapper .icon-close:hover{
+    color: red;
+}
+
 .form-box h2{
     font-size: 2em;
     color: #162938;

@@ -71,6 +71,15 @@ body{
 }
 
 
+.wrapper .icon-close .close-icon{
+    font-size: 2em;
+}
+
+.wrapper .icon-close:hover{
+    color: red;
+}
+
+
 .wrapper .form-box .error{
     justify-content: center;
     align-items: center;
