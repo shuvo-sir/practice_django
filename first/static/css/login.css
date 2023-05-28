@@ -85,11 +85,12 @@ body{
 }
 
 
-.wrapper .icon-close .close-icon{
-    font-size: 2em;
+.wrapper .icon-close  a{
+    font-size: 1.5em;
+    color: #fff;
 }
 
-.wrapper .icon-close:hover{
+.wrapper .icon-close a:hover{
     color: red;
 }
 
