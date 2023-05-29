@@ -157,7 +157,7 @@ ul{
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: #e91e;
+    background-color: #359381;
     height: 2px;
     box-sizing: border-box;
     width: 50px;
@@ -181,3 +181,7 @@ ul{
 }
 
 
+.footer-col ul li a:hover {
+    color: #ffffffff;
+    padding-left: 10px;
+}
