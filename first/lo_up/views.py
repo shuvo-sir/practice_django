@@ -58,3 +58,12 @@ def SignUp(request):
 
 def Dashboard(request):
     return render(request, "lo_up/dashboard.html")
+
+
+
+
+
+
+# Upload page
+def Upload(request):
+    return render(request, "lo_up/upload.html")

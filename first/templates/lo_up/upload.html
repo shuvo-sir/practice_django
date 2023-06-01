@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block <title></title> %}Upload{% endblock %}</title>
+    {% block css %} 
+    <link rel="stylesheet" href="{% static 'css/upload.css' %}"> 
+    {% endblock css %}
+</head>
+<body>
+
+    <div class = "box">
+        <h1>File Upload Form</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="department">Select Department</label>
+            <select id="department" name="department">
+                <option value="cse">CSE</option>
+                <option value="eee">EEE</option>
+                <option value="nfe">NFE</option>
+            </select>
+            <br><br>
+            <label for="semester">Select Semester</label>
+                <select id="semester" name="semester">
+                    <option value="summer">Summer</option>
+                    <option value="fall">Fall</option>
+                    <option value="spring">Spring</option>
+                </select>
+            <br><br>
+            <input type="file" name="file" id="file">
+            <br><br>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+    
+</body>
+</html>
