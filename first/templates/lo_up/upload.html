@@ -12,8 +12,23 @@
 </head>
 <body>
 
+
+
+
+    <section class = "diu">
+        
+        <img src="{% static 'image/hill1.png' %}" id="hill1">
+        <img src="{% static 'image/hill2.png' %}" id="hill2">
+        <img src="{% static 'image/hill3.png' %}" id="hill3">
+        <img src="{% static 'image/hill4.png' %}" id="hill4">
+        <img src="{% static 'image/hill5.png' %}" id="hill5">
+        <img src="{% static 'image/tree.png' %}" id="tree">
+        <img src="{% static 'image/leaf.png' %}" id="leaf">
+        <img src="{% static 'image/plant.png' %}" id="plant">
+    </section>
+
     <div class = "box">
-        <h1>File Upload Form</h1>
+        <h1>Upload Your Question</h1>
         <form action="" method="POST">
             {% csrf_token %}
             <label for="department">Select Department</label>
@@ -23,14 +38,16 @@
                 <option value="nfe">NFE</option>
             </select>
             <br><br>
+            
             <label for="semester">Select Semester</label>
                 <select id="semester" name="semester">
                     <option value="summer">Summer</option>
                     <option value="fall">Fall</option>
                     <option value="spring">Spring</option>
                 </select>
+
             <br><br>
-            <input type="file" name="file" id="file">
+            <input type="file" class = "file" name="file" id="file">
             <br><br>
             <input type="submit" value="Upload">
         </form>
