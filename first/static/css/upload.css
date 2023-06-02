@@ -38,7 +38,7 @@ body {
   }
 
   form {
-    margin-top: 25px;
+    margin-top: 5px;
     background-color: transparent;
     padding: 40px;
     color: black;
@@ -49,21 +49,23 @@ body {
     margin-bottom: 10px;
     font-weight: bold;
     color: black;
+    margin-left: 40px;
   }
 
   select, input[type="file"] {
     display: block;
-    width: 100%;
-    padding: 10px;
+    width: 80%;
+    padding: 8px;
     border-radius: 5px;
     border: 1px solid black;
     margin-bottom: 10px;
     font-size: 16px;
     background: white;
+    margin-left: 40px;
   }
 
   input[type="submit"] {
-    width: 100%;
+    width: 80%;
     height: 45px;
     background: #162938;
     border: none;
@@ -72,6 +74,7 @@ body {
     font-size: 1em;
     color: #fff;
     font-weight: 500;
+    margin-left: 40px;
   }
 
 

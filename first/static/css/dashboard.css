@@ -119,12 +119,20 @@ header{
 
 .container{
     max-width: 1170px;
-    margin: auto;
 }
 
 .row{
     display: flex;
-    flex-wrap: wrap;
+
+    width: 137%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid rgba(183, 147, 147, 0.5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(206, 198, 198, 0.9);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
 }
 
 ul{
@@ -132,14 +140,13 @@ ul{
 }
 
 .footer{
-    background-color: #908a96;
-    padding: 70px 0;
+    background-color: #003329;
     position: relative;
 }
 
 .footer-col{
-    width: 25%;
-    padding: 0 15px;
+    margin-top: 50px;
+    margin-left: 220px;
 }
 
 
@@ -156,11 +163,11 @@ ul{
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -4px;
     background-color: #359381;
     height: 2px;
     box-sizing: border-box;
-    width: 50px;
+    width: 60px;
 }
 
 
