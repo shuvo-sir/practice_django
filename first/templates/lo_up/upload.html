@@ -29,7 +29,7 @@
 
     <div class = "box">
         <h1>Upload Your Question</h1>
-        <form action="{% url 'upload' %}" method="POST">
+        <form action="{% url 'upload' %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <label for="department">Select Department</label>
             <select id="department" name="department">

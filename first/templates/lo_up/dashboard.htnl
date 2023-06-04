@@ -19,7 +19,7 @@
 </head>
 <body>
     <header>
-      <img src="{% static 'image/bad.jpg' %}">
+      <img src="{% static 'image/bad.jpg' %}" class = "logo">
       <nav class="navigation">
         <a href="#" class = "active">Home</a>
         <a href="#">About</a>

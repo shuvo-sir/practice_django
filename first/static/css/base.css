@@ -24,14 +24,18 @@ header{
 }
 
 .logo{
-    font-size: 2em;
-    color: #359381;
-    pointer-events: none;
-    margin-right: 270px;
+    height: 150px;
+    width: 170px;
+    margin-top: -40px;
 }
 
 
 /* This is the nev bar */
+.navigation{
+    margin-left: 160px;
+}
+
+
 .navigation a {
     text-decoration: none;
     color: #359381;

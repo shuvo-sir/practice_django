@@ -18,7 +18,7 @@ def Login(request):
         if user is not None:
             # User credentials are valid, log in the user
             login(request, user)
-            return HttpResponseRedirect('/dashboard/')  # Redirect to the dashboard 
+            return HttpResponseRedirect('/dashboard2/')  # Redirect to the dashboard 
         else:
             # User credentials are invalid, handle the error
             error_message = "Invalid username or password."
@@ -58,8 +58,14 @@ def SignUp(request):
 
 # This is the dashboard
 
-def Dashboard(request):
-    return render(request, "lo_up/dashboard.html")
+# def Dashboard(request):
+#     return render(request, "lo_up/dashboard.html")
+
+
+
+
+def Dashboard2(request):
+    return render(request, "lo_up/dashboard2.html")
 
 
 
