@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
+from .models import UploadedQuestion
 
 
 
@@ -17,7 +18,7 @@ def Login(request):
         if user is not None:
             # User credentials are valid, log in the user
             login(request, user)
-            return HttpResponseRedirect('/dashboard/')  # Redirect to the dashboard or any other page
+            return HttpResponseRedirect('/dashboard/')  # Redirect to the dashboard 
         else:
             # User credentials are invalid, handle the error
             error_message = "Invalid username or password."
@@ -54,6 +55,7 @@ def SignUp(request):
 
 
 
+
 # This is the dashboard
 
 def Dashboard(request):
@@ -66,4 +68,26 @@ def Dashboard(request):
 
 # Upload page
 def Upload(request):
+    if request.method == 'POST':
+        department = request.POST.get('department')
+        semester = request.POST.get('semester')
+        year = request.POST.get('year')
+        exam = request.POST.get('exam')
+        file = request.FILES.get('file')
+
+        question = UploadedQuestion(
+            department=department,
+            semester=semester,
+            year=year,
+            exam=exam,
+            file=file
+        )
+        question.save()
+        return HttpResponseRedirect('/dashboard/')  # Redirect to a success page after saving the data
     return render(request, "lo_up/upload.html")
+
+
+
+
+
+
