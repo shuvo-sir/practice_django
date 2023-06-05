@@ -12,7 +12,8 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}"> 
     {% endblock css %}
   
-     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
    
 </head>
@@ -59,10 +60,83 @@
 
 
 
-  {% block content %}{% endblock content %}
 
-  {% load static %}  
- <script src="{% static 'javaScript/base.js' %}"></script>
+   <div class = "all">
+      <div class = "b-all">
+        <div class = "service" id = "about">
+          <h1>ABOUT</h1>
+          <p>Md Ryad very free man.Fell free to contact him at any moment.But there is one condition took him as like he is she not he actually..xd</p>
+        </div>
+  
+        <div class = "service" id = "services">
+          <h1>SERVICES</h1>
+          <p>Service based on hourly..per hour 000.11$</p>
+        </div>
+  
+        <div class = "service" id = "contact">
+          <h1>CONTACT</h1>
+          <p>Dail any number and say ooohhhh Riyad..xd</p>
+        </div>
+      </div>
+   </div>
+
+
+
+
+
+{% comment %} this is the footer code {% endcomment %}
+
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="footer-col">
+              <h4>Company</h4>
+              <ul>
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">our services</a></li>
+                  <li><a href="#">privacy policy</a></li>
+                  <li><a href="#">affiliate program</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Get Help</h4>
+              <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">shipping</a></li>
+                  <li><a href="#">order status</a></li>
+                  <li><a href="#">payment option</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Online</h4>
+            <ul>
+                <li><a href="#">watch</a></li>
+                <li><a href="#">bag</a></li>
+                <li><a href="#">shoes</a></li>
+                <li><a href="#">dress</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+               <a href="#"><i class = "fab fa-facebook-f"></i></a>
+               <a href="#"><i class = "fab fa-twitter"></i></a>
+               <a href="#"><i class = "fab fa-instagram"></i></a>
+               <a href="#"><i class = "fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+      </div>
+  </div>
+</footer>
+
+
+{% block content %}{% endblock content %}
+
+{% load static %}  
+<script src="{% static 'javaScript/base.js' %}"></script>
 
 </body>
 </html>
