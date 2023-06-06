@@ -6,5 +6,5 @@ class UploadedQuestion(models.Model):
     semester = models.CharField(max_length=100)
     year = models.IntegerField()
     exam = models.CharField(max_length=100)
-    file = models.FileField(upload_to='question_files/')
+    file = models.FileField(upload_to='media/')
     uploaded_at = models.DateTimeField(auto_now_add=True)

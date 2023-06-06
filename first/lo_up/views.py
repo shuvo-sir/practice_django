@@ -4,6 +4,10 @@ from django.contrib.auth import authenticate, login
 from .models import UploadedQuestion
 
 
+from django.db.models import Q
+from django.http import HttpResponse
+
+
 
 
 # This is the  user login functionality in Django.
@@ -85,6 +89,17 @@ def Upload(request):
         question.save()
         return HttpResponseRedirect('/dashboard/')  # Redirect to a success page after saving the data
     return render(request, "lo_up/upload.html")
+
+
+
+
+
+
+
+# question view 
+
+def QuestionList(request):
+    return render(request, "lo_up/question.html")
 
 
 
