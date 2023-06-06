@@ -49,29 +49,26 @@ header{
 .navigation a:hover,
 .navigation a.active{
     background-color: #359381;
-    color: #fff;
+    color: white;
 }
 
 
 /* This is the sing up and login buttun */
 
 .log{
-    margin-left: 250px;
+    margin-left: 240px;
 }
 
 .log a{
     text-decoration: none;
     color: white;
-    padding: 6px 15px;
+    padding: 6px 13px;
     border-radius: 20px;
     margin: 0 10px;
     font-weight: 600;
+    background-color: #359381;
 }
 
-.log a:hover{
-    background-color: #359381;
-    color: #fff;
-}
 
 /* This is the picture section  */
 
@@ -152,8 +149,12 @@ header{
     float: left;
     padding: 20px 0;
     padding: 30px;
-    text-align: center;
     margin-left: 100px;
+}
+
+
+.service h1{
+    text-align: center;
 }
 
 

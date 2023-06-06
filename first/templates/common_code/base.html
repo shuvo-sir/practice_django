@@ -22,7 +22,7 @@
       <img src="{% static 'image/bad.jpg' %}" class = "logo">
       <nav class="navigation">
         <a href="#" class = "active">Home</a>
-        <a href="{% url 'signup' %}">About</a>
+        <a href="#about">About</a>
         <a href="{% url 'signup' %}">Service</a>
         <a href="{% url 'signup' %}">Upload</a>
       </nav>
@@ -52,9 +52,6 @@
           In the DIU Question Bank, sections are used to categorize and organize questions based on specific subjects, topics, or disciplines. <br><br>
           Sections provide a structured framework for users to easily navigate and locate relevant questions within the question bank. <br><br>
           Here are some key points about sections in the DIU Question Bank.
-          In the DIU Question Bank, sections are used to categorize and organize questions based on specific subjects, topics, or disciplines. <br><br>
-          Sections provide a structured framework for users to easily navigate and locate relevant questions within the question bank. <br><br>
-          Here are some key points about sections in the DIU Question Bank.
       </p>
    </section>
 
@@ -75,7 +72,9 @@
   
         <div class = "service" id = "contact">
           <h1>CONTACT</h1>
-          <p>Dail any number and say ooohhhh Riyad..xd</p>
+          <p>Email: diuquestionsbank@gmail.com <br>
+             Facebook: Diu Question Bank
+          </p>
         </div>
       </div>
    </div>
@@ -121,10 +120,10 @@
           <div class="footer-col">
             <h4>Follow Us</h4>
             <div class="social-links">
-               <a href="#"><i class = "fab fa-facebook-f"></i></a>
-               <a href="#"><i class = "fab fa-twitter"></i></a>
+               <a href="https://www.facebook.com/diuquestionsbank"><i class = "fab fa-facebook-f"></i></a>
+               {% comment %} <a href="#"><i class = "fab fa-twitter"></i></a> {% endcomment %}
                <a href="#"><i class = "fab fa-instagram"></i></a>
-               <a href="#"><i class = "fab fa-linkedin-in"></i></a>
+               {% comment %} <a href="#"><i class = "fab fa-linkedin-in"></i></a> {% endcomment %}
             </div>
           </div>
 
