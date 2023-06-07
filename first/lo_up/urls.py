@@ -11,4 +11,7 @@ urlpatterns = [
     path("dashboard/", views.Dashboard, name = "dashboard"),
     path("upload/", views.Upload, name = "upload"),
     path("search/", views.QuestionList, name='search'),
+
+    # path("reward/", views.Reward, name='reward'),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,4 +1,4 @@
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -1326,7 +1326,7 @@ body {
   }
 }
 
-/* This is the foote part */
+/* This is the foote part 
 
 *{
   margin: 0;
@@ -1447,4 +1447,4 @@ ul{
       margin-bottom: 30px;
   }
 }
-
+ */

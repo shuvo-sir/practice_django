@@ -70,6 +70,7 @@ def Dashboard(request):
 
 
 
+
 # Upload page
 def Upload(request):
     if request.method == 'POST':
@@ -106,3 +107,13 @@ def QuestionList(request):
 
 
 
+# This is the reward point
+
+# def Reward(request):
+#     return render(request, "lo_up/reward.html")
+
+
+
+# def Reward2(request):
+#     return render(request, "lo_up/reward2.html")
+ 
