@@ -12,6 +12,10 @@
 </head>
 <body>
     
+    
+
+    
+ 
     <section class = "diu">
         
         <img src="{% static 'image/hill1.png' %}" id="hill1">
@@ -22,9 +26,11 @@
         <img src="{% static 'image/tree.png' %}" id="tree">
         <img src="{% static 'image/leaf.png' %}" id="leaf">
         <img src="{% static 'image/plant.png' %}" id="plant">
-    </section>
+    </section> 
 
-    
+
+
+ 
 
 
     <div class = "wrapper">
@@ -40,12 +46,12 @@
                 {% csrf_token %}
                 <div class = "input-box">
                     <span class = "icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" required name = "username">
+                    <input type="text" required id = "username">
                     <label >Username</label>
                 </div>
                 <div class = "input-box">
                     <span class = "icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required name = "password">
+                    <input type="password" required id = "password">
                     <label >Password</label>
                 </div>
                 <div class="remember-forgot">
@@ -57,12 +63,33 @@
                     <p>Don't have an account? <a href="{% url 'signup' %}" class = "register-link">SignUp</a></p>
                 </div>
             </form>
-            
         </div>
     </div>
 
-    
+   
 
+
+
+            {% comment %} This is a pandas Face {% endcomment %}
+            <div class="ear-l"></div>
+            <div class="ear-r"></div>
+            <div class="pada-face">
+                <div class="blush-l"></div>
+                <div class="blush-r"></div>
+        
+                <div class="eye-l">
+                    <div class="eyeball-l"></div>
+                </div>
+                <div class="eye-r">
+                    <div class="eyeball-r"></div>
+                </div>
+                <div class="nose"></div>
+                <div class="mouth"></div>
+                <div class="hand-r"></div>
+                <div class="hand-l"></div>
+                <div class="leg-r"></div>
+                <div class="leg-l"></div>
+            </div>
 
 
 
@@ -73,9 +100,9 @@
   {% block content %}{% endblock content %}
 
   {% load static %}  
- <script src="{% static 'javaScript/login.js' %}"></script>
+ <script src="{% static 'javaScript/login.js' %}"></script> 
 
- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>

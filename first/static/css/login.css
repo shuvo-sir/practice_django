@@ -13,6 +13,212 @@ body{
 }
 
 
+
+
+/* # Panda Face in the login page  */
+.pada-face {
+    height: 9.5em;
+    width: 10.4em;
+    background-color: white;
+    border: 0.18em solid #2e0d30;
+    border-radius: 7.5em 7.5em 5.62em 5.62em;
+    position: absolute;
+    top: 4.85em;
+    left: 42em;
+
+}
+.ear-l,
+.ear-r{
+    background-color: #3f3554;
+    height: 3.5em;
+    width: 3.81em;
+    border: 0.18em solid #2e0d30;
+    border-radius: 2.5em 2.5em 0 0;
+    top: 4.75em;
+    position: absolute;
+    left: 42em;
+}
+
+.ear-l {
+    transform: rotate(-38deg);
+    left: 40.70em;
+}
+.ear-r {
+    transform: rotate(38deg);
+    left: 50em;
+}
+
+.blush-l, .blush-r{
+    background-color: #ff8bb1;
+    height: 1.5em;
+    width: 1.75em;
+    border-radius: 50%;
+    position: absolute;
+    top: 5em;
+}
+
+.blush-l{
+    transform: rotate(25deg);
+    left: 1em;
+}
+.blush-r{
+    transform: rotate(-25deg);
+    right: 1em;
+}
+
+.eye-l,.eye-r{
+    background-color: #3f3554;
+    height: 2.45em;
+    width: 2em;
+    border-radius: 2em;
+    position: absolute;
+    top: 2.5em;
+}
+.eye-l{
+    left: 1.50em;
+    transform: rotate(-20deg);
+}
+
+.eye-r{
+    right: 1.50em;
+    transform: rotate(20deg);
+}
+.eyeball-l,.eyeball-r{
+    height: 0.8em;
+    width: 0.8em;
+    background-color: whitesmoke;
+    border-radius: 30%;
+    position: absolute;
+    left: 0.6em;
+    top: 0.8em;
+    transition: 1s all;
+}
+.eyeball-l{
+    transform: rotate(20deg);
+}
+.eyeball-r{
+    transform: rotate(-20deg);
+}
+
+.nose{
+    height: 1.2em;
+    width: 1.2em;
+    background-color: #3f3554;
+    position: absolute;
+    top: 5.3em;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 1.2em 0 0 0.25em;
+    transform: rotate(45deg);
+}
+.nose::before{
+    content: "";
+    position: absolute;
+    background-color: #3f3554;
+    height: 0.75em;
+    width: 0.15em;
+    transform: rotate(-45deg);
+    top: 0.75em;
+    left: 1.1em;
+}
+
+.mouth,
+.mouth::before{
+    height: 0.75em;
+    width: 0.93em;
+    background-color: transparent;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0.18em #3f3554;
+}
+
+.mouth{
+    top: 6.31em;
+    left: 4.15em;
+}
+
+
+.mouth::before{
+    content: "";
+    position: absolute;
+    left: 0.9em;
+}
+
+.hand-l,.hand-r{
+    background-color: #3f3554;
+    height: 2.81em;
+    width: 2.5em;
+    border: 0.18em solid #2e0d30;
+    border-radius: 0.6em 0.6em 2.18em 2.18em;
+    transition: 1s all;
+    position: absolute;
+    top: 8.4em;
+}
+.hand-l{
+    left: 10.5em;
+}
+.hand-r{
+    right: 10.5em;
+}
+.hand-l::after,.hand-r::after{
+    position: absolute;
+    content: "";
+    background-color: white;
+    height: 0.2em;
+    width: 0.2em;
+    border-radius: 30%;
+    bottom: 0.31em;
+    left: 1em;
+    box-shadow: 0.67em -0.37em rgb(200, 198, 198), -0.67em -0.37em rgb(200, 198, 198);
+}
+
+
+
+
+.leg-r, .leg-l{
+    background-color: #3f3554;
+    height: 3.12em;
+    width: 3.12em;
+    border: 0.18em solid #2e0d30;
+    border-radius: 2.5em 2.5em 1.2em 1.2em;
+    position: absolute;
+    top: 35.16em;
+}
+.leg-l{
+    left: 10.5em;
+}
+.leg-r{
+    right: 10.5em;
+}
+.leg-l::before, .leg-r::before{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 1.37em;
+    width: 1.75em;
+    left: 0.55em;
+    top: 1.12em;
+    border-radius: 1.56em 1.56em 0.6em 0.6em;
+}
+.leg-l::after, .leg-r::after{
+    position: absolute;
+    content: "";
+    background-color: white;
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 50%;
+    top: 0.31em;
+    left: 1.12em;
+    box-shadow: 0.87em 0.37em #ffffff, -0.87em 0.37em #ffffff;
+}
+
+
+
+
+
+
+
 /* This is the picture section */
 .diu {
     position: relative;
@@ -34,7 +240,7 @@ body{
 /* This is the boder section */
 .wrapper{
     margin-left: 550px;
-    margin-top: 200px;
+    margin-top: 230px;
     position: relative;
     width: 400px;
     height: 440px;
@@ -66,6 +272,7 @@ body{
     width: 100%;
     padding: 40px;
     /* margin-top: px; */
+
 }
 
 
@@ -93,6 +300,9 @@ body{
 .wrapper .icon-close a:hover{
     color: red;
 }
+
+
+
 
 .form-box h2{
     font-size: 2em;
@@ -205,4 +415,3 @@ body{
 .login-register p a:hover{
     text-decoration: underline;
 }
-

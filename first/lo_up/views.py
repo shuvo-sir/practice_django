@@ -10,6 +10,7 @@ from django.http import HttpResponse
 
 
 
+
 # This is the  user login functionality in Django.
 def Login(request):
     if request.method == "POST":
