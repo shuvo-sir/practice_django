@@ -1,96 +1,106 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+    margin: 0rem;
+    padding: 0rem;
     font-family: 'Poppoins', sans-serif;
+}
+
+html{
+    /* 100% = 16rem default font size
+    what if we want 10rem as default font size 
+    so we will divide the 10/16 = .625 * 100 = 62.5% */
+    font-size: 62.5%;
 }
 
 
 body{
     background: white;
-    min-height: 100vh;
-    overflow-x: hidden;
+    min-height: auto;
+    overflow-x: hidden; 
+    background: url("/static/image/plant.png") ,url("/static/image/leaf.png"),url("/static/image/tree.png"),url("/static/image/hill5.png"),url("/static/image/hill4.png"),url("/static/image/hill3.png") ,url("/static/image/hill2.png") ,url("/static/image/hill1.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; 
+   
 }
 
 
 
-
 /* # Panda Face in the login page  */
-.pada-face {
-    height: 9.5em;
-    width: 10.4em;
+/* .pada-face {
+    height: 15.2em;
+    width: 16.64em;
     background-color: white;
-    border: 0.18em solid #2e0d30;
-    border-radius: 7.5em 7.5em 5.62em 5.62em;
+    border: 0.288em solid #2e0d30;
+    border-radius: 12em 12em 8.992em 8.992em;
     position: absolute;
-    top: 4.85em;
-    left: 42em;
+    top: 7.76em;
+    left: 67.2em;
 
 }
 .ear-l,
 .ear-r{
     background-color: #3f3554;
-    height: 3.5em;
-    width: 3.81em;
-    border: 0.18em solid #2e0d30;
-    border-radius: 2.5em 2.5em 0 0;
-    top: 4.75em;
+    height: 5.6em;
+    width: 6.096em;
+    border: 0.288em solid #2e0d30;
+    border-radius: 4em 4em 0 0;
+    top: 7.6em;
     position: absolute;
-    left: 42em;
+    left: 67.2em;
 }
 
 .ear-l {
     transform: rotate(-38deg);
-    left: 40.70em;
+    left: 65em;
 }
 .ear-r {
     transform: rotate(38deg);
-    left: 50em;
+    left: 80em;
 }
 
 .blush-l, .blush-r{
     background-color: #ff8bb1;
-    height: 1.5em;
-    width: 1.75em;
-    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.75rem;
+    border-radius: 5rem;
     position: absolute;
-    top: 5em;
+    top: 8.2rem;
 }
 
 .blush-l{
     transform: rotate(25deg);
-    left: 1em;
+    left: 1.6rem;
 }
 .blush-r{
     transform: rotate(-25deg);
-    right: 1em;
+    right: 1.6rem;
 }
 
 .eye-l,.eye-r{
     background-color: #3f3554;
-    height: 2.45em;
-    width: 2em;
-    border-radius: 2em;
+    height: 3.92rem;
+    width: 3.2rem;
+    border-radius: 3.2rem;
     position: absolute;
-    top: 2.5em;
+    top: 4rem;
 }
 .eye-l{
-    left: 1.50em;
+    left: 2.4rem;
     transform: rotate(-20deg);
 }
 
 .eye-r{
-    right: 1.50em;
+    right: 2.4rem;
     transform: rotate(20deg);
 }
 .eyeball-l,.eyeball-r{
-    height: 0.8em;
-    width: 0.8em;
+    height: 1.28rem;
+    width: 1.28rem;
     background-color: whitesmoke;
-    border-radius: 30%;
+    border-radius: 0.4rem;
     position: absolute;
-    left: 0.6em;
-    top: 0.8em;
+    left: 0.96rem;
+    top: 1.28rem;
     transition: 1s all;
 }
 .eyeball-l{
@@ -101,117 +111,117 @@ body{
 }
 
 .nose{
-    height: 1.2em;
-    width: 1.2em;
+    height: 1.92rem;
+    width: 1.92rem;
     background-color: #3f3554;
     position: absolute;
-    top: 5.3em;
+    top: 8.48rem;
     margin: auto;
     left: 0;
     right: 0;
-    border-radius: 1.2em 0 0 0.25em;
+    border-radius: 1.92rem 0 0 0.4rem;
     transform: rotate(45deg);
 }
 .nose::before{
     content: "";
     position: absolute;
     background-color: #3f3554;
-    height: 0.75em;
-    width: 0.15em;
+    height: 1.2rem;
+    width: 0.24rem;
     transform: rotate(-45deg);
-    top: 0.75em;
-    left: 1.1em;
+    top: 1.2rem;
+    left: 1.76rem;
 }
 
 .mouth,
 .mouth::before{
-    height: 0.75em;
-    width: 0.93em;
+    height: 1.2rem;
+    width: 1.488rem;
     background-color: transparent;
     position: absolute;
-    border-radius: 50%;
-    box-shadow: 0 0.18em #3f3554;
+    border-radius: 5rem;
+    box-shadow: 0 0.288rem #3f3554;
 }
 
 .mouth{
-    top: 6.31em;
-    left: 4.15em;
+    top: 10.096rem;
+    left: 6.64rem;
 }
 
 
 .mouth::before{
     content: "";
     position: absolute;
-    left: 0.9em;
+    left: 1.44rem;
 }
+
 
 .hand-l,.hand-r{
     background-color: #3f3554;
-    height: 2.81em;
-    width: 2.5em;
-    border: 0.18em solid #2e0d30;
-    border-radius: 0.6em 0.6em 2.18em 2.18em;
+    height: 4.496rem;
+    width: 4rem;
+    border: 0.288rem solid #2e0d30;
+    border-radius: 0.96rem 0.96rem 3.488rem 3.488rem;
     transition: 1s all;
     position: absolute;
-    top: 8.4em;
+    top: 13.44rem;
 }
 .hand-l{
-    left: 10.5em;
+    left: 16.8rem;
 }
 .hand-r{
-    right: 10.5em;
+    right: 16.8rem;
 }
 .hand-l::after,.hand-r::after{
     position: absolute;
     content: "";
     background-color: white;
-    height: 0.2em;
-    width: 0.2em;
-    border-radius: 30%;
-    bottom: 0.31em;
-    left: 1em;
-    box-shadow: 0.67em -0.37em rgb(200, 198, 198), -0.67em -0.37em rgb(200, 198, 198);
+    height: 0.32rem;
+    width: 0.32rem;
+    border-radius: 3rem;
+    bottom: 0.496rem;
+    left: 1.6rem;
+    box-shadow: 1.072rem -0.592rem rgb(200, 198, 198), -1.072rem -0.592rem rgb(200, 198, 198);
 }
-
 
 
 
 .leg-r, .leg-l{
     background-color: #3f3554;
-    height: 3.12em;
-    width: 3.12em;
-    border: 0.18em solid #2e0d30;
-    border-radius: 2.5em 2.5em 1.2em 1.2em;
+    height: 4.992em;
+    width: 4.992em;
+    border: 0.288em solid #2e0d30;
+    border-radius: 4em 4em 1.92em 1.92em;
     position: absolute;
-    top: 35.16em;
+    top: 56.256em;
 }
 .leg-l{
-    left: 10.5em;
+    left: 16.8em;
 }
 .leg-r{
-    right: 10.5em;
+    right: 16.8em;
 }
 .leg-l::before, .leg-r::before{
     content: "";
     position: absolute;
     background-color: white;
-    height: 1.37em;
-    width: 1.75em;
-    left: 0.55em;
-    top: 1.12em;
-    border-radius: 1.56em 1.56em 0.6em 0.6em;
+    height: 2.193em;
+    width: 2.8em;
+    left: 0.88em;
+    top: 1.92em;
+    border-radius: 2.496em 2.496em 0.96em 0.96em;
 }
 .leg-l::after, .leg-r::after{
     position: absolute;
     content: "";
     background-color: white;
-    height: 0.5em;
-    width: 0.5em;
+    height: 0.8em;
+    width: 0.8em;
     border-radius: 50%;
-    top: 0.31em;
-    left: 1.12em;
-    box-shadow: 0.87em 0.37em #ffffff, -0.87em 0.37em #ffffff;
-}
+    top: 0.496em;
+    left: 1.92em;
+    box-shadow: 1.392em 0.592em #ffffff, -1.392em 0.592em #ffffff;
+} */
 
 
 
@@ -220,7 +230,7 @@ body{
 
 
 /* This is the picture section */
-.diu {
+ /* .diu {
     position: relative;
     display: flex;
     justify-content: center;
@@ -235,20 +245,27 @@ body{
     left: 0;
     width: 100%;
     pointer-events: none;
-}
+}  */
+
+
+
+
+
+
 
 /* This is the boder section */
 .wrapper{
-    margin-left: 550px;
-    margin-top: 230px;
-    position: relative;
-    width: 400px;
-    height: 440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40rem;
+    height: 44rem;
     background: transparent;
-    border: 2px solid rgba(255,255,255, .5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .9);
+    border: .2rem solid rgba(255,255,255, .5);
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .9);
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -257,9 +274,9 @@ body{
 .wrapper .form-box .error{
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-left: 50px;
-    margin-bottom: 0px;
+    margin-top: .2rem;
+    margin-left: .5rem;
+    margin-bottom: 0rem;
     color: red;
 
 }
@@ -269,9 +286,9 @@ body{
 
 /* This is the form */
 .wrapper .form-box{
-    width: 100%;
-    padding: 40px;
-    /* margin-top: px; */
+    width: 80%;
+    padding: 4rem;
+    /* margin-top: rem; */
 
 }
 
@@ -280,20 +297,20 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    width: 45px;
-    height: 45px;
+    width: 4.5rem;
+    height: 4.5rem;
     background: #162938;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 2rem;
     z-index: 1;
 }
 
 
 .wrapper .icon-close  a{
-    font-size: 1.5em;
+    font-size: 2.4rem;
     color: #fff;
 }
 
@@ -305,7 +322,7 @@ body{
 
 
 .form-box h2{
-    font-size: 2em;
+    font-size: 3.2rem;
     color: #162938;
     text-align: center;
 }
@@ -313,18 +330,19 @@ body{
 .input-box{
     position: relative;
     width: 100%;
-    height: 50px;
-    border-bottom: 2px solid #162938;
-    margin: 30px 0;
+    height: 5rem;
+    border-bottom: .2rem solid #162938;
+    margin: 3rem 0;
 }
 
 .input-box label{
     position: absolute;
-    top: 30px;
-    left: 5px;
+    top: 3rem;
+    left: .5rem;
     transform: translateY(-30%);
     color: #162938;
-    font-weight: 500;
+    font-size: 1.6rem;
+    font-weight: 400;
     pointer-events: none;
     transition: .5s;
 }
@@ -332,7 +350,7 @@ body{
 
 .input-box input:focus~label,
 .input-box input:valid~label{
-    top: -2px;
+    top: -.2rem;
 }
 
 
@@ -342,26 +360,26 @@ body{
     background: transparent;
     border: none;
     outline: none;
-    font-size: 1em;
+    font-size: 1.5rem;
     color: #162938;
     font-weight: 600;
-    padding: 0 35px 0 5px;
+    padding: 0 3.5rem 0 .5rem;
 }
 
 .input-box .icon {
     position: absolute;
-    right: 4px;
-    font-size: 1.2em;
+    right: .4rem;
+    font-size: 1.92em;
     color: #162938;
-    line-height: 57px;
+    line-height: 5.7rem;
 }
 
 
 .remember-forgot{
-    font-size: .9em;
+    font-size: 1.44rem;
     color: #162938;
     font-weight: 500;
-    margin: -15px 0 15px;
+    margin: -1.5rem 0 1.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -369,7 +387,7 @@ body{
 
 .remember-forgot label input{
     accent-color: #162938;
-    margin: 3px;
+    margin: .3rem;
 }
 
 
@@ -386,23 +404,23 @@ body{
 
 .btn{
     width: 100%;
-    height: 45px;
+    height: 4.5rem;
     background: #162938;
     border: none;
-    border-radius: 6px;
+    border-radius: .6rem;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.6rem;
     color: #fff;
     font-weight: 500;
 }
 
 
 .login-register{
-    font-size: .9em;
+    font-size: 1.44rem;
     color: #162938;
     text-align: center;
     font-weight: 500;
-    margin: 25px 0 10px;
+    margin: 2.5rem 0 1rem;
 }
 
 
@@ -414,4 +432,43 @@ body{
 
 .login-register p a:hover{
     text-decoration: underline;
+}
+
+
+
+
+/* This is the media Section */
+@media(max-width:998px){
+    html{
+        font-size: 65%;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 60%;
+    }
+}
+
+@media(max-width:695){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:499px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media(max-width:350px){
+    html{
+        font-size: 45%;
+    }
+}
+
+@media(max-width:299px){
+    html{
+        font-size: 40%;
+    }
 }

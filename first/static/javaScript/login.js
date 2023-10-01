@@ -11,29 +11,31 @@ let handR = document.querySelector(".hand-r");
 
 let normalEyeStyle = () => {
     eyeL.style.cssText = `
-        left: 0.6em;
-        top: 0.6em;
+        left: 0.96em;
+        top: 0.96em;
         `;
 
     eyeR.style.cssText = `
-        right: 0.6em;
-        top: 0.6em;
+        right: 0.96em;
+        top: 0.96em;
         `;    
 };
 
 
 let normalHandStyle = () => {
     handL.style.cssText = `
-        height: 2.81em;
-        top: 8.4em;
-        left: 10.5em;
+}
+        height: 4.496rem;
+        top: 13.44rem;
+        left: 16.8rem;
         transform: rotate(0deg);
         `;
 
     handR.style.cssText = `
-        height: 2.81em;
-        top: 8.4em;
-        right: 10.5em;
+}
+        height: 4.496rem;
+        top: 13.44rem;
+        right: 16.8rem;
         transform: rotate(0deg);
         `;
 
@@ -42,30 +44,30 @@ let normalHandStyle = () => {
 
 Username.addEventListener("focus", () => {
     eyeL.style.cssText = `
-        left: 0.75em;
-        top: 1.12em;
+        top: 2rem;
+        left: 1.3rem;  
         `;
 
     eyeR.style.cssText = `
-        right: 0.75em;
-        top: 1.12em;
+        top: 2rem;
+        right: 1.3rem;
         `;
     normalHandStyle();
 });
 
 Password.addEventListener("focus", () => {
     handL.style.cssText = `
-        height: 7.56em;
-        top: 1.87em;
-        left: 7.50em;
+        height: 12.096em;
+        top: 2.992em;
+        left: 12em;
         transform: rotate(155deg);
         `;
 
 
     handR.style.cssText = `
-        height: 7.56em;
-        top: 1.87em;
-        right: 7.50em;
+        height: 12.096em;
+        top: 2.992em;
+        right: 12em;
         transform: rotate(-155deg);
         `;
     normalEyeStyle();
