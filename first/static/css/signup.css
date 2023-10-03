@@ -1,57 +1,53 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+    margin: 0rem;
+    padding: 0rem;
     font-family: 'Poppoins', sans-serif;
+}
+
+html{
+    /* 100% = 16rem default font size
+    what if we want 10rem as default font size 
+    so we will divide the 10/16 = .625 * 100 = 62.5% */
+    font-size: 62.5%;
 }
 
 
 body{
     background: white;
-    min-height: 100vh;
-    overflow-x: hidden;
+    min-height: auto;
+    overflow-x: hidden; 
+    background: url("/static/image/plant.png") ,url("/static/image/leaf.png"),url("/static/image/tree.png"),url("/static/image/hill5.png"),url("/static/image/hill4.png"),url("/static/image/hill3.png") ,url("/static/image/hill2.png") ,url("/static/image/hill1.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; 
+   
 }
 
-
-/* This is the picture section */
-
-.diu img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-}
-
-.diu {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
 /* This is the boder section */
 .wrapper{
-    margin-left: 550px;
-    margin-top: 150px;
-    position: relative;
-    width: 400px;
-    height: 520px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40rem;
+    height: 49rem;
     background: transparent;
-    border: 2px solid rgba(255,255,255, .5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .9);
+    border: .2rem solid rgba(255,255,255, .5);
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
+    box-shadow: 0 0 3rem rgba(0, 0, 0, .9);
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }    
-
 /* This is the form */
 .wrapper .form-box{
-    width: 100%;
-    padding: 40px;
+    width: 80%;
+    padding: 4rem;
+    /* margin-top: rem; */
+
 }
 
 
@@ -59,20 +55,20 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    width: 45px;
-    height: 45px;
+    width: 4.5rem;
+    height: 4.5rem;
     background: #162938;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 2rem;
     z-index: 1;
 }
 
 
 .wrapper .icon-close  a{
-    font-size: 1.5em;
+    font-size: 2.4rem;
     color: #fff;
 }
 
@@ -81,18 +77,20 @@ body{
 }
 
 
+
 .wrapper .form-box .error{
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    margin-left: 60px;
-    margin-bottom: 0px;
+    margin-top: .2rem;
+    margin-left: .5rem;
+    margin-bottom: 0rem;
     color: red;
 
 }
 
+
 .form-box h2{
-    font-size: 2em;
+    font-size: 3.2rem;
     color: #162938;
     text-align: center;
 }
@@ -100,18 +98,19 @@ body{
 .input-box{
     position: relative;
     width: 100%;
-    height: 30px;
-    border-bottom: 2px solid #162938;
-    margin: 30px 0;
+    height: 3rem;
+    border-bottom: .2rem solid #162938;
+    margin: 3rem 0;
 }
 
 .input-box label{
     position: absolute;
-    top: 5px;
-    left: 5px;
-    transform: translateY(-30%);
+    top: .9rem;
+    left: .2rem;
+    transform: translateY(-50%);
     color: #162938;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: 400;
     pointer-events: none;
     transition: .5s;
 }
@@ -119,7 +118,7 @@ body{
 
 .input-box input:focus~label,
 .input-box input:valid~label{
-    top: -9px;
+    top: -.2rem;
 }
 
 
@@ -129,26 +128,26 @@ body{
     background: transparent;
     border: none;
     outline: none;
-    font-size: 1em;
+    font-size: 1.5rem;
     color: #162938;
     font-weight: 600;
-    padding: 0 35px 0 5px;
+    padding: 0 3.5rem 0 .5rem;
 }
 
 .input-box .icon {
     position: absolute;
-    right: 4px;
-    font-size: 1.2em;
+    right: .2rem;
+    font-size: 1.92em;
     color: #162938;
-    line-height: 5px;
+    line-height: 3.7rem;
 }
 
 
 .remember-forgot{
-    font-size: .9em;
+    font-size: 1.44rem;
     color: #162938;
     font-weight: 500;
-    margin: -15px 0 15px;
+    margin: -1.5rem 0 1.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -156,7 +155,7 @@ body{
 
 .remember-forgot label input{
     accent-color: #162938;
-    margin: 3px;
+    margin: .3rem;
 }
 
 
@@ -173,23 +172,23 @@ body{
 
 .btn{
     width: 100%;
-    height: 45px;
+    height: 4.5rem;
     background: #162938;
     border: none;
-    border-radius: 6px;
+    border-radius: .6rem;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.6rem;
     color: #fff;
     font-weight: 500;
 }
 
 
 .login-register{
-    font-size: .9em;
+    font-size: 1.44rem;
     color: #162938;
     text-align: center;
     font-weight: 500;
-    margin: 25px 0 10px;
+    margin: 2.5rem 0 1rem;
 }
 
 
@@ -201,4 +200,41 @@ body{
 
 .login-register p a:hover{
     text-decoration: underline;
+}
+
+
+/* This is the media Section */
+@media(max-width:998px){
+    html{
+        font-size: 65%;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 60%;
+    }
+}
+
+@media(max-width:695){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:499px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media(max-width:350px){
+    html{
+        font-size: 45%;
+    }
+}
+
+@media(max-width:299px){
+    html{
+        font-size: 40%;
+    }
 }

@@ -1,8 +1,14 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+    margin: 0rem;
+    padding: 0rem;
     font-family: 'Poppoins', sans-serif;
+}
+
+html{
+    /* 100% = 16rem default font size
+    what if we want 10rem as default font size 
+    so we will divide the 10/16 = .625 * 100 = 62.5% */
+    font-size: 62.5%;
 }
 
 body{
@@ -16,7 +22,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    padding: 4rem 10rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -297,20 +303,4 @@ ul{
 .footer-col .social-links a:hover{
     color: #24262b;
     background-color: #fff;
-}
-
-
-@media(max-width: 767px){
-    .footer-col{
-        width: 50%;
-        margin-bottom: 30px;
-    }
-}
-
-
-@media(max-width: 574px){
-    .footer-col{
-        width: 100%;
-        margin-bottom: 30px;
-    }
 }
