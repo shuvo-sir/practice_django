@@ -13,12 +13,26 @@
     {% endblock css %}
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
    
 </head>
 <body>
-    <header>
+
+
+  <header class="header">
+    <a href="#" class="logo-link">
+      <img src="{% static 'image/bad.jpg' %}" alt="Logo" class="logo">
+    </a>
+    <nav class="navigation">
+      <a href="#" class="navigation-link active">Home</a>
+      <a href="#" class="navigation-link">About</a>
+      <a href="#" class="navigation-link">Reward</a>
+      <a href="{% url 'upload' %}" class="navigation-link">Upload</a>
+      <a href="{% url 'search' %}" class="navigation-link">Search</a>
+    </nav>
+</header>
+
+
+    {% comment %} <header>
       <img src="{% static 'image/bad.jpg' %}" class = "logo">
       <nav class="navigation">
         <a href="#" class = "active">Home</a>
@@ -27,20 +41,22 @@
         <a href="{% url 'upload' %}">Upload</a>
         <a href="{% url 'search' %}">Search</a>
       </nav>
-    </header>
+    </header> {% endcomment %}
 
     <section class = "diu">
         
-        <img src="{% static 'image/hill1.png' %}" id="hill1">
-        <img src="{% static 'image/hill2.png' %}" id="hill2">
-        <img src="{% static 'image/hill3.png' %}" id="hill3">
-        <img src="{% static 'image/hill4.png' %}" id="hill4">
-        <img src="{% static 'image/hill5.png' %}" id="hill5">
-        <img src="{% static 'image/tree.png' %}" id="tree">
+      <img src="{% static 'image/hill1.png' %}" id="hill1">
+      <img src="{% static 'image/hill2.png' %}" id="hill2">
+      <img src="{% static 'image/hill3.png' %}" id="hill3">
+      <img src="{% static 'image/hill4.png' %}" id="hill4">
+      <img src="{% static 'image/hill5.png' %}" id="hill5">
+      <img src="{% static 'image/tree.png' %}" id="tree">
+      <div class="diu_text">
         <h2 id = "text">DIU QUESTION BANK</h2>
-        <img src="{% static 'image/leaf.png' %}" id="leaf">
-        <img src="{% static 'image/plant.png' %}" id="plant">
-    </section>
+      </div>
+      <img src="{% static 'image/leaf.png' %}" id="leaf">
+      <img src="{% static 'image/plant.png' %}" id="plant">
+  </section>
 
     <section class = "sec">
       <h2>DIU</h2>
@@ -57,7 +73,7 @@
 
     {% comment %} this is the footer code   {% endcomment %}
 
-   <footer class="footer">
+    <footer class="footer">
       <div class="container">
           <div class="row">
               <div class="footer-col">
@@ -78,7 +94,7 @@
                       <li><a href="#">payment option</a></li>
                   </ul>
               </div>
-
+    
               <div class="footer-col">
                 <h4>Online</h4>
                 <ul>
